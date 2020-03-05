@@ -1,8 +1,8 @@
 import Taro, { Component } from '@tarojs/taro'
 import dva from './utils/dva'
 import models from './models'
-import Home from './pages/home'
 import { Provider } from '@tarojs/redux'
+import Home from './pages/home'
 
 import './app.less'
 
@@ -56,10 +56,10 @@ class App extends Component {
           selectedIconPath: './images/tab/user-active.png'
         }
       ],
-      color: '#333',
+      color: '#ccc',
       selectedColor: '#333',
       backgroundColor: '#fff',
-      borderStyle: 'white'
+      borderStyle: 'black'
     }
   }
 

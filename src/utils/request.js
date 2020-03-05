@@ -1,5 +1,5 @@
 import Taro from '@tarojs/taro'
-import { getOrigin, console } from '../config'
+import { getOrigin, console } from './config'
 
 export default (options = { method: 'GET', data: {} }) => {
   if (console) {

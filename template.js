@@ -21,7 +21,7 @@ import './index.less'
 @connect(({${dirName}}) => ({
   ...${dirName},
 }))
-export default class ${titleCase(dirName)} extends Component {
+class ${titleCase(dirName)} extends Component {
   config = {
     navigationBarTitleText: '${dirName}',
   }
@@ -44,6 +44,7 @@ export default class ${titleCase(dirName)} extends Component {
     )
   }
 }
+export default ${titleCase(dirName)}
 `
 
 // scss文件模版
@@ -98,7 +99,7 @@ export const demo = (data) => {
 fs.mkdirSync(`./src/pages/${dirName}`) // mkdir $1
 process.chdir(`./src/pages/${dirName}`) // cd $1
 
-fs.writeFileSync('index.js', indexTep)
+fs.writeFileSync('index.jsx', indexTep)
 fs.writeFileSync('index.less', lessTep)
 fs.writeFileSync('model.js', modelTep)
 fs.writeFileSync('service.js', serviceTep)
