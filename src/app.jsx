@@ -4,7 +4,7 @@ import models from './models'
 import { Provider } from '@tarojs/redux'
 import Home from './pages/home'
 
-import './app.less'
+import './styles/app.scss'
 
 const dvaApp = dva.createApp({
   initialState: {},
@@ -28,7 +28,12 @@ class App extends Component {
   componentDidCatchError() {}
 
   config = {
-    pages: ['pages/home/index', 'pages/order/index', 'pages/user/index'],
+    pages: [
+      'pages/home/index',
+      'pages/order/index',
+      'pages/user/index',
+      'pages/login/index'
+    ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
@@ -46,8 +51,8 @@ class App extends Component {
         {
           pagePath: 'pages/order/index',
           text: '订单',
-          iconPath: './images/tab/cart.png',
-          selectedIconPath: './images/tab/cart-active.png'
+          iconPath: './images/tab/order.png',
+          selectedIconPath: './images/tab/order-active.png'
         },
         {
           pagePath: 'pages/user/index',

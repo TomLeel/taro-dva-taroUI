@@ -1,28 +1,32 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
-import './index.less'
+import './index.scss'
 
-@connect(({ home }) => ({
-  ...home
+@connect(({home}) => ({
+  ...home,
 }))
 class Home extends Component {
   config = {
-    navigationBarTitleText: 'home'
+    navigationBarTitleText: 'home',
   }
 
-  componentWillMount() {}
+  componentWillMount () { }
 
-  componentDidMount() {}
+  componentDidMount () { }
 
-  componentWillUnmount() {}
+  componentWillUnmount () { }
 
-  componentDidShow() {}
+  componentDidShow () { }
 
-  componentDidHide() {}
+  componentDidHide () { }
 
   render() {
-    return <View className="home-page">home123</View>
+    return (
+      <View className="home-page">
+        home
+      </View>
+    )
   }
 }
 export default Home

@@ -1,27 +1,13 @@
 {
 	"miniprogramRoot": "dist/",
-	"projectname": "app",
+	"projectname": "myApp",
 	"description": "找砂网买家版",
 	"appid": "touristappid",
 	"setting": {
 		"urlCheck": true,
 		"es6": false,
-		"enhance": false,
 		"postcss": false,
-		"minified": false,
-		"newFeature": true,
-		"coverView": true,
-		"autoAudits": false,
-		"showShadowRootInWxmlPanel": true,
-		"scopeDataCheck": false,
-		"checkInvalidKey": true,
-		"checkSiteMap": true,
-		"uploadWithSourceMap": true,
-		"babelSetting": {
-			"ignore": [],
-			"disablePlugins": [],
-			"outputPath": ""
-		}
+		"minified": false
 	},
 	"compileType": "miniprogram",
 	"simulatorType": "wechat",

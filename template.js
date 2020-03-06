@@ -16,7 +16,7 @@ if (!dirName) {
 const indexTep = `import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
-import './index.less'
+import './index.scss'
 
 @connect(({${dirName}}) => ({
   ...${dirName},
@@ -48,7 +48,7 @@ export default ${titleCase(dirName)}
 `
 
 // scss文件模版
-const lessTep = `
+const scssTep = `
 
 .${dirName}-page {
 }
@@ -100,7 +100,7 @@ fs.mkdirSync(`./src/pages/${dirName}`) // mkdir $1
 process.chdir(`./src/pages/${dirName}`) // cd $1
 
 fs.writeFileSync('index.jsx', indexTep)
-fs.writeFileSync('index.less', lessTep)
+fs.writeFileSync('index.scss', scssTep)
 fs.writeFileSync('model.js', modelTep)
 fs.writeFileSync('service.js', serviceTep)
 

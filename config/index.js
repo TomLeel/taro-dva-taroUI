@@ -1,6 +1,6 @@
 const config = {
-  projectName: 'app',
-  date: '2020-3-4',
+  projectName: 'myApp',
+  date: '2020-3-6',
   designWidth: 750,
   deviceRatio: {
     '640': 2.34 / 2,
@@ -34,13 +34,6 @@ const config = {
       ]
     ]
   },
-  loaders: [
-    {
-      test: /\.js$/,
-      exclude: /(node_modules|bower_components)/,
-      loader: 'babel-loader'
-    }
-  ],
   plugins: [],
   defineConstants: {},
   mini: {
