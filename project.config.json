@@ -1,7 +1,7 @@
 {
 	"miniprogramRoot": "dist/",
-	"projectname": "myApp",
-	"description": "找砂网买家版",
+	"projectname": "taroDva",
+	"description": "初始化模板",
 	"appid": "touristappid",
 	"setting": {
 		"urlCheck": true,

@@ -54,55 +54,11 @@ const scssTep = `
 }
 `
 
-// model文件模版
-const modelTep = `import * as ${dirName}Api from './service'
-
-export default {
-  namespace: '${dirName}',
-  state: {
-
-  },
-
-  effects: {
-    * effectsDemo(_, { call, put }) {
-      const { status, data } = yield call(${dirName}Api.demo, {})
-      if (status === 'ok') {
-        yield put({ type: 'save',
-          payload: {
-            topData: data,
-          } })
-      }
-    },
-  },
-
-  reducers: {
-    save(state, { payload }) {
-      return { ...state, ...payload }
-    },
-  },
-
-}
-`
-
-// service页面模版
-const serviceTep = `import Request from '../../utils/request'
-
-export const demo = (data) => {
-  return Request({
-    url: '路径',
-    method: 'POST',
-    data,
-  })
-}
-`
-
 fs.mkdirSync(`./src/pages/${dirName}`) // mkdir $1
 process.chdir(`./src/pages/${dirName}`) // cd $1
 
-fs.writeFileSync('index.jsx', indexTep)
+fs.writeFileSync('index.js', indexTep)
 fs.writeFileSync('index.scss', scssTep)
-fs.writeFileSync('model.js', modelTep)
-fs.writeFileSync('service.js', serviceTep)
 
 console.log(`模版${dirName}已创建,请手动增加models`)
 

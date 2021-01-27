@@ -1,14 +1,14 @@
-import * as userApi from './service'
+import * as api from '../../service/order'
 
 export default {
-  namespace: 'user',
+  namespace: 'order',
   state: {
 
   },
 
   effects: {
     * effectsDemo(_, { call, put }) {
-      const { status, data } = yield call(userApi.demo, {})
+      const { status, data } = yield call(api.demo, {})
       if (status === 'ok') {
         yield put({ type: 'save',
           payload: {

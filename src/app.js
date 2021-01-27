@@ -4,6 +4,7 @@ import models from './models'
 import { Provider } from '@tarojs/redux'
 import Home from './pages/home'
 
+import 'taro-ui/dist/style/index.scss'
 import './styles/app.scss'
 
 const dvaApp = dva.createApp({

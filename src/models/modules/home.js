@@ -1,14 +1,14 @@
-import * as loginApi from './service'
+import * as api from '../../service/home'
 
 export default {
-  namespace: 'login',
+  namespace: 'home',
   state: {
 
   },
 
   effects: {
     * effectsDemo(_, { call, put }) {
-      const { status, data } = yield call(loginApi.demo, {})
+      const { status, data } = yield call(api.demo, {})
       if (status === 'ok') {
         yield put({ type: 'save',
           payload: {

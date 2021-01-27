@@ -4,19 +4,19 @@ export const console = false
 const ENV = process.env.APP_ENV
 
 export function getEnv() {
-  let env = 'production'
+  let env = 'prod'
   // eslint-disable-next-line
   switch (ENV) {
-    case 'production': {
-      env = 'production'
+    case 'prod': {
+      env = 'prod'
       break
     }
-    case 'QA': {
-      env = 'QA'
+    case 'dev': {
+      env = 'dev'
       break
     }
     default: {
-      env = 'production'
+      env = 'prod'
     }
   }
   // eslint-disable-next-line
@@ -32,11 +32,11 @@ export function getOrigin(url = '') {
     return url
   }
   switch (getEnv()) {
-    case 'production': {
+    case 'prod': {
       origin = 'http://103.99.210.193:8087'
       break
     }
-    case 'QA': {
+    case 'dev': {
       origin = 'http://192.168.0.200:8300'
       break
     }

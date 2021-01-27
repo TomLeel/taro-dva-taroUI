@@ -1,14 +1,14 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
-import './index.less'
+import './index.scss'
 
-@connect(({ order }) => ({
-  ...order
+@connect(({order}) => ({
+  ...order,
 }))
-export default class Order extends Component {
+class Order extends Component {
   config = {
-    navigationBarTitleText: 'order'
+    navigationBarTitleText: 'order',
   }
 
   componentWillMount () { }
@@ -22,6 +22,11 @@ export default class Order extends Component {
   componentDidHide () { }
 
   render() {
-    return <View className="order-page">order</View>
+    return (
+      <View className="order-page">
+        order
+      </View>
+    )
   }
 }
+export default Order
